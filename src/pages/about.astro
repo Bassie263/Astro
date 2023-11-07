@@ -1,20 +1,64 @@
-<a href="/">Home</a><br>
-<a href="/about/">About</a>
+---
+import '../styles/style.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 
+const pageTitle = 'Who tf is this Astroboy';
+
+const identity = {
+	firstName : 'Bas',
+	lastName : 'Bulckaen',
+	role : 'Student',
+	age : '20',
+	place : 'Belgium',
+	education : 'DEVINE',
+	school : 'Howest Kortrijk',
+	hobbies : ['Music', 'Sports', 'Tech']
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = true;
+const goal = 2;
+
+
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro - about</title>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<h1>Who the f*ck is Bas</h1>
+		<Header />
+
+		<h1>{pageTitle}</h1>
 		<h2>Astroboy</h2>
 			<p> I am a 20 year old student from the Belgium. I am currently studying DEVINE at Howest Kortrijk. I am a big fan of the web and everything that has to do with it. I am also a big fan of music and I love to play/watch sports.
-			</p>
-	
+		</p>
+
+		<h3>My identity</h3>
+		<u class="identity">
+			<li>My name is {identity.firstName}.</li>
+			<li>I live in {identity.place} and I study as a {identity.education}.</li>
+			{identity.hobbies.length >= 2 &&
+			  <li>Two of my hobbies are: {identity.hobbies[0]}, {identity.hobbies[1]} and {identity.hobbies[2]}</li>
+			}
+		  </u>
+		<h3>My skills are:</h3>
+		<ul>
+		{skills.map((skill) => <li class="skills">{skill}</li>)}
+		</ul>
+		
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>

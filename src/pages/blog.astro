@@ -1,10 +1,8 @@
 ---
 import '../styles/style.css';
-
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
-
 
 <html lang="en">
 	<head>
@@ -16,19 +14,16 @@ import Footer from '../components/Footer.astro';
 		<title>Astro</title>
 	</head>
 	<body>
-		<Header />
-		<h1>Bassie's Epic Blog</h1>
+        <Header />
+		<h1>Bekijk recente Blogposts</h1>
 		<h2>Recent Blogposts</h2>
 			<ul>
 				<li><a href="/posts/post1/">7/10/2023 - 9u39</a></li>
 				<li><a href="/posts/post2/">7/10/2023 - 10u02</a></li>
 				<li><a href="/posts/post3/">7/10/2023 - 10u46</a></li>
 		  </ul>
-		<h2>about me</h2>
-			<a href="/about/">About</a>
-
-		<Footer />
-		<script>
+        <Footer />
+        <script>
 			import "../scripts/menu.js";
 		</script>
 	</body>
