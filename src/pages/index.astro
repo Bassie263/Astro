@@ -1,35 +1,7 @@
 ---
-import '../styles/style.css';
-
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Home Page";
 ---
-
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="style.css" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header />
-		<h1>Bassie's Epic Blog</h1>
-		<h2>Recent Blogposts</h2>
-			<ul>
-				<li><a href="/posts/post1/">7/10/2023 - 9u39</a></li>
-				<li><a href="/posts/post2/">7/10/2023 - 10u02</a></li>
-				<li><a href="/posts/post3/">7/10/2023 - 10u46</a></li>
-		  </ul>
-		<h2>about me</h2>
-			<a href="/about/">About</a>
-
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+<BaseLayout>
+  <h2>My awesome blog subtitle</h2>
+</BaseLayout>
